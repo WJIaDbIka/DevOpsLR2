@@ -7,8 +7,7 @@ int main() {
 
     std::cout << "Введіть значення x: ";
     std::cin >> x;
-    std::cout << "Введіть кількість членів ряду: ";
-    std::cin >> terms;
+    terms = 3;
 
     FuncA func; // Створюємо об'єкт класу FuncA
     double result = func.Calculate(x, terms); // Викликаємо метод через об'єкт
