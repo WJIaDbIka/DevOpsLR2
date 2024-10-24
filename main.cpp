@@ -1,17 +1,24 @@
-#include <iostream>
-#include "FuncA.h"
+#include <iostream>  // Підключення бібліотеки для введення/виведення
+#include "FuncA.h"   // Підключення заголовного файлу FuncA.h, який містить опис класу FuncA
 
 int main() {
-    double x;
-    int terms;
+    double x;       // Змінна для зберігання введеного значення x
+    int terms;     // Змінна для зберігання кількості членів ряду
 
+    // Запит на введення значення x
     std::cout << "Введіть значення x: ";
-    std::cin >> x;
-    terms = 3;
+    std::cin >> x; // Зчитування значення x з консолі
+
+    // Запит на введення кількості членів ряду
+    std::cout << "Введіть кількість членів ряду для обчислення: ";
+    std::cin >> terms; // Зчитування кількості членів з консолі
 
     FuncA func; // Створюємо об'єкт класу FuncA
-    double result = func.Calculate(x, terms); // Викликаємо метод через об'єкт
+    double result = func.Calculate(x, terms); // Викликаємо метод Calculate через об'єкт func
+
+    // Виводимо результат обчислення
     std::cout << "Сума ряду: " << result << std::endl;
 
-    return 0;
+    return 0; // Завершення програми
 }
+
